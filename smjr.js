@@ -1,10 +1,11 @@
-/*Function 'makeContainerReadOnly' make all elements under the defined container, read only
-    Remove Manipulation buttons under the defined selectors and exclude exclude the elements under defined selectors
+/**
+ * @desc Make all elements under the defined container, read only
+ * @description Remove Manipulation buttons under the defined selectors and exclude exclude the elements under defined selectors
     Disable all the inputs, selects, textarea except the defined selectors to exclude
-This function required Three arguments:
-    containerSelector: This is the selector of main container to define the scope in which all elements will be read only
-    selectors: This is the array of selectors to include elements
-    notSelector: This is the array of selectors to exclude the elements*/
+ * @param containerSelector: This is the selector of main container to define the scope in which all elements will be read only
+ * @param selectors: This is the array of selectors to include elements
+ * @param notSelector: This is the array of selectors to exclude the elements
+ */
 function makeContainerReadOnly(containerSelector,selectors,notSelector){
     $(containerSelector).find(selectors.join()).find('a').not(notSelector.join()).remove();
     $(containerSelector).find('input,select,textarea').not(notSelector.join()).prop("disabled","disabled");
