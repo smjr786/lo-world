@@ -1,3 +1,13 @@
+function highlightSelectedRow(currRow){
+    var currentRow = currRow;
+    var parentTable = $(currentRow).parents("table");
+
+    $(parentTable).find("tbody tr.trActive").removeClass("trActive");
+    $(currentRow).addClass("trActive");
+}
+
+
+
 /**
  * @desc Make all elements under the defined container, read only
  * @description Remove Manipulation buttons under the defined selectors and exclude exclude the elements under defined selectors
