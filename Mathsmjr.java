@@ -40,4 +40,16 @@
             return false;
         return true;
     }
+      
+          /**
+     * Swap without using third variable
+     * @param x first no
+     * @param y second no
+     */
+    public static void swapTwo(int x,int y){
+        x = x + y;
+        y = x - y;
+        x = x - y;
+        System.out.print("Value of x is "+x+" value of y is "+y);
+    }
 }
