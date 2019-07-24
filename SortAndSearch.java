@@ -41,4 +41,19 @@ public static void binSea(int[] sortedArray,int x,int l,int r){
         System.out.print(Arrays.toString(array));
     }
         
+        // Selection Sort; compare each number with each number to find min and swap min index with cuurent index; left side will be sorted list  
+          public static void selSor(int[] array){
+        for(int i = 0;i<array.length-1;i++) {
+            int minIndex = i;
+        for(int j = i+1;j<array.length-i;j++) {
+        if(array[minIndex]>array[j])
+        minIndex = j;
+        }
+            int temp = array[minIndex];
+            array[minIndex] = array[i];
+            array[i] = temp;
+        }
+        System.out.print(Arrays.toString(array));
+    }
+        
     }
