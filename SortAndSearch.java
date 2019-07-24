@@ -27,4 +27,17 @@ public static void binSea(int[] sortedArray,int x,int l,int r){
         System.out.print(Arrays.toString(array));
     }
         
+        public static void insSor(int[] array){
+        for(int i=1;i<array.length;i++){
+            int j = i-1;
+            int tempValue = array[i];
+            while(j>=0 && array[j]>tempValue){
+                    array[j+1]=array[j];
+                j--;
+            }
+            array[j+1]=tempValue;
+        }
+        System.out.print(Arrays.toString(array));
+    }
+        
     }
