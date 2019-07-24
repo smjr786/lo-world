@@ -27,6 +27,7 @@ public static void binSea(int[] sortedArray,int x,int l,int r){
         System.out.print(Arrays.toString(array));
     }
         
+        //sorted array at left side and unsorted array at right side from which one by one machting with each of unsorted uptil bigger one 
         public static void insSor(int[] array){
         for(int i=1;i<array.length;i++){
             int j = i-1;
