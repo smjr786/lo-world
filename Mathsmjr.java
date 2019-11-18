@@ -52,4 +52,10 @@
         x = x - y;
         System.out.print("Value of x is "+x+" value of y is "+y);
     }
+      private int fibo(int x){
+        if(x==0 || x== 1)
+            return x;
+        else
+            return fibo(x-1)+fibo(x-2);
+    }
 }
