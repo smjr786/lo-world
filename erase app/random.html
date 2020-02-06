@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Scratch it's cool !</title>
+<meta name='HandheldFriendly' content='True' />
+<meta name='viewport' content='user-scalable=0' />
+<meta name="viewport" content="width=device-width" />
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="canonical" href="https://marksmandigital.com/erase/mobflash.html" />
+<meta property="og:title" content="Scratch it's cool !" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://marksmandigital.com/erase/wraper.jpg" />
+<meta property="og:url" content="https://marksmandigital.com/erase/mobflash.html" />
+<meta property="og:site_name" content="Marksman advertising" />
+<meta property="og:description" content="Marksman advertising" />
+
+
+<style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+background-color: white;
+ background:  no-repeat scroll center ; 
+     background-repeat: no-repeat;
+    background-size:  auto 100%;
+ width: 100%;
+ height: auto;
+
+
+    top: 0;
+    left: 0;
+    background-position: center;
+  bottom: 0;
+}
+a {
+	color: #f0920f;
+}
+a.box {
+	text-decoration: none;
+	display: inline-block;
+	color: #000;
+	background: #DDD;
+	padding: 10px;
+	margin: 10px;
+}
+.big {
+	font-size: 2em;
+	display: inline-block;
+	margin: 10px;
+}
+.container {
+	position: relative;
+	display: inline-block;
+	width: 480px;
+	height: 470px;
+}
+#robot {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+}
+#redux {
+	left: 18.4%;
+	position: absolute;
+	top: 23.5%;
+	z-index: 2;
+	cursor: pointer;
+}
+.testdiv {
+	height: 470px !important;
+	display: block;
+	overflow: hidden;
+}
+
+.cb-active0{
+content:url("https://marksmandigital.com/erase/bg.jpg");
+}
+
+.cb-active1{
+ content:url("https://marksmandigital.com/erase/bg2.jpg"); 
+}
+</style>
+
+<script src='https://code.jquery.com/jquery-2.1.1.min.js' type='text/javascript'></script>
+
+<script src='https://marksmandigital.com/jquery.eraser.js' type='text/javascript'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+<div align="center" class="container"> 
+     <img src="https://marksmandigital.com/erase/loading.gif"  width="20%" height="auto"  id="splash_img">
+ <img  width="100%"  ng-class="{'cb-active0': tab == 1,'cb-active1': tab == 2}" height="auto"  class="lazy-img" id="robot" style="display:none;" /> 
+    
+<img src="https://marksmandigital.com/erase/wraper.jpg" width="auto" height="37%"  style="display:none !important;" id="redux" />
+</div>
+</body>
+
+<script type = "text/javascript">
+
+var app = angular.module('myApp', []);
+
+
+app.controller('myCtrl', function($scope) {
+
+
+
+        $scope.tab=Math.floor((Math.random() * 2) + 1);
+
+   $(function(event){
+    
+
+		setTimeout(function(event){ 
+		$('#splash_img').hide();
+                $('#robot').show();
+		$('#redux').show();
+		$('#redux').eraser({size: 25});
+		$("#redux").eraser('clear');
+		$("#redux").eraser('reset');
+		event.preventDefault();
+		 }, 4000);  	  
+      });
+
+});
+     
+    </script>
+</html>
